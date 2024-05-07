@@ -16,7 +16,9 @@ public class clienteDto {
 		return "clienteDto [id = "+ id +", " + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", nombreCompleto="
 				+ nombreCompleto + ", fechaAlta=" + fechaAlta + ", validado=" + validado + "]";
 	}
-	
+	public clienteDto () {
+		
+	}
 	public clienteDto( long id, String dni, String nombre, String apellidos) {
 		super();
 		this.id = id;

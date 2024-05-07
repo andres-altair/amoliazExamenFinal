@@ -1,7 +1,5 @@
 package controladores;
-/*
- * clase principal
- */
+
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -16,17 +14,20 @@ import servicios.menuImplementacion;
 import servicios.menuInterfaz;
 import servicios.operativaInterfaz;
 import servicios.oprativaImplementacion;
-
-public class inicio {
 /*
- * metodo principal
+ * clase principal
  */
+public class inicio {
+
 	public static List<citaDto>listaCita= new ArrayList<>();
 	public static List<clienteDto>listaClienteDtos= new ArrayList<>();
 	public static DateTimeFormatter formatter= DateTimeFormatter.ofPattern("ddMMyyyy");
 	public static LocalDate hoyDate = LocalDate.now();
 	public static String sfecha = hoyDate.format(formatter);
 	public static String rutaLog = "C:\\Users\\profesor\\Desktop\\"+"log-"+sfecha+".txt";
+	/*
+	 * metodo principal
+	 */
 	public static void main(String[] args) {
 		ficheroInterfaz fi   = new ficheroImplementacion();
 		menuInterfaz mInterfaz= new menuImplementacion();
