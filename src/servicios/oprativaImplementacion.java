@@ -62,7 +62,9 @@ public class oprativaImplementacion implements operativaInterfaz {
 				cita.setEspeciaString(especialidadString);
 				cita.setFecha(fechaDateTime);
 				inicio.listaCita.add(cita);				
-			}	
+			}	else {
+				System.out.println("no puedes");
+			}
 		}
 	}
 	@Override
@@ -91,8 +93,9 @@ public class oprativaImplementacion implements operativaInterfaz {
 	public void imprimir() throws Exception{
 		System.out.println("escribe la fecha (dd-MM-yyyy)");
 		String fechString = scanner.nextLine();
+		DateTimeFormatter formatter= DateTimeFormatter.ofPattern("dd-MM-yyyy");
 		for (clienteDto clienteDto :inicio.listaClienteDtos) {
-			if(clienteDto.equals(fechString)) {
+			if(clienteDto.getFechaAlta().format(formatter).equals(fechString)) {
 				ficheroInterfaz ficheroInterfaz   = new ficheroImplementacion();
 				ficheroInterfaz.escrituraCita();
 
