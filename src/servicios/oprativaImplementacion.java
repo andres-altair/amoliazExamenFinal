@@ -16,8 +16,11 @@ public class oprativaImplementacion implements operativaInterfaz {
 	@Override
 	public void registro()throws Exception {
 		long id = crearId();
+		System.out.println("escribe el dni");
 		String dniString  = scanner.nextLine();
+		System.out.println("escribe el nombre");
 		String nombreString = scanner.nextLine();
+		System.out.println("escribe el apellido");
 		String apellidoString  =scanner.nextLine();
 		clienteDto cliente  =new clienteDto(id, dniString, nombreString, apellidoString);
 		inicio.listaClienteDtos.add(cliente);
